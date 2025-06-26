@@ -122,6 +122,7 @@ exports.endGame = async (req, res) => {
   const game = await Game.findById(gameId);
   if (!game) return res.status(404).json({ message: 'Game not found' });
 
+  game.bestScore = best;
   game.timeEnded = new Date();
   await game.save();
 
