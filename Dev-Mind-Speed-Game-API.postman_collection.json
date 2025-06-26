@@ -1,0 +1,91 @@
+{
+	"info": {
+		"_postman_id": "a1b25a57-666a-44a7-9f68-42797e6f0f2f",
+		"name": "Dev-Mind-Speed-Game-API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "46206005",
+		"_collection_link": "https://nada-4755321.postman.co/workspace/Nada-'s-Workspace~f24cdb68-09f4-48e5-8c38-5b685fb364ef/collection/46206005-a1b25a57-666a-44a7-9f68-42797e6f0f2f?action=share&source=collection_link&creator=46206005"
+	},
+	"item": [
+		{
+			"name": "Start Game",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Nada\",\r\n  \"difficulty\": 1\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/game/start",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"game",
+						"start"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Submit Answer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"answer\": 8\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/game/:gameId/submit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"game",
+						"gameId",
+						"submit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "End Game",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/game/:gameId/end",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"game",
+						"gameId",
+						"end"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
