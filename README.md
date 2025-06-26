@@ -16,17 +16,21 @@ This is a backend API for a math speed game built using "Node.js", where the pla
 
 # How to Run
 1. Clone the repo:
+
 git clone https://github.com/NadaKdesat/Dev-Mind-Speed-Game-API.git
 cd dev-mind-speed
 
 2. Install dependencies:
+
 npm install
 
 3. Create a `.env` file in the root directory and add your MongoDB connection string:
+
 MONGODB_URI=your_mongodb_atlas_connection_string
 PORT=3000
 
 4. Start the server:
+
 node index.js
 
 
