@@ -122,10 +122,6 @@ exports.endGame = async (req, res) => {
   const game = await Game.findById(gameId);
   if (!game) return res.status(404).json({ message: 'Game not found' });
 
-  game.bestScore = best;
-  game.timeEnded = new Date();
-  await game.save();
-
   const totalTime = Math.floor((Date.now() - game.timeStarted) / 1000);
   const best = game.history.reduce((best, q) => {
     if (q.isCorrect && (best === null || q.timeTaken < best.timeTaken)) {
@@ -133,6 +129,10 @@ exports.endGame = async (req, res) => {
     }
     return best;
   }, null);
+
+  game.bestScore = best;
+  game.timeEnded = new Date();
+  await game.save();
 
   res.json({
     name: game.name,
