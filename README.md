@@ -54,3 +54,7 @@ This is a backend API for a math speed game built using "Node.js", where the pla
 
 - End Game
     GET /game/:gameId/end
+
+# Postman
+A sample Postman collection is included:  
+[👉 Dev-Mind-Speed-Game-API.postman_collection.json](./Dev-Mind-Speed-Game-API.postman_collection.json)
